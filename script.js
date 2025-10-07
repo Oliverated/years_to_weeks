@@ -1,5 +1,6 @@
 let btn = document.getElementById("check-btn");
-let about_block = document.querySelector(".about-block");
+let about_block = document.querySelector(".about-sector");
+let back_btn = document.querySelector(".back-btn");
 let name_txt = document.getElementById("name");
 let week_txt = document.getElementById("week");
 let life_per_txt = document.getElementById("life_per");
@@ -19,7 +20,7 @@ btn.addEventListener("click", (e) => {
     name_inp.style.borderBottom = "2px solid red";
   } else if (date_inp.value == "") {
     date_inp.style.borderBottom = "2px solid red";
-  } else {
+  } else  {
 
     // for date value
     const selectDate = new Date(date_inp.value);
@@ -76,6 +77,15 @@ btn.addEventListener("click", (e) => {
     date_inp.value = "";
 
     about_block.classList.add("active");
+
+  back_btn.addEventListener("click", ()=>{
+  about_block.classList.remove("active")
+  
+    name_inp.value = "";
+    date_inp.value = "";
+  })
+
   }
+
 });
 

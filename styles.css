@@ -28,13 +28,12 @@ button {
 :root {
   --text: #f9fffa;
   --primary: #f0fdf7;
-  --secondary: #00321b;
+  --secondary: #002212;
   --accent:#00321b4e;
   --ff: "MyCustomFont", sans-serif;
   --boldff: "Boldfont", sans-serif;
 }
 body {
-  /* background: #f0faf0; */
   background: var(--primary);
   height: 100vh;
   align-content: center;
@@ -45,7 +44,7 @@ body {
 form {
   background: var(--text);
   box-shadow: -1px -1px 15px -10px var(--secondary);
-  width: 80%;
+  width: 90%;
   height: fit-content;
   padding: 5% 0;
   margin: auto;
@@ -70,7 +69,7 @@ h1 {
   font-weight: bold;
   /* font-family: var(--ff); */
   color: var(--secondary);
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   margin-bottom: 10%;
 }
@@ -80,7 +79,7 @@ label {
   bottom: 20px;
   transition: 0.5s;
   width: fit-content;
-  color: #001a05b9;
+  color: #001a057c;
   display: block;
   /* font-family: var(--ff); */
   font-size: 0.6rem;
@@ -108,6 +107,10 @@ label {
   border-bottom: var(--secondary);
 }
 
+#date-inp{
+color: var(--secondary);
+}
+
 .form-ctn input {
   background: transparent;
   border: none;
@@ -131,25 +134,33 @@ label {
   color: var(--primary);
 }
 
+/* about sector */
 
+.about-sector{
+background-color: #f0fdf7b9;
+  z-index: 1;
+  padding: 5% 0;
+  border-radius: 20px 20px 0 0;
+  height: auto;
+  position: fixed;
+  overflow-y: auto;
+  top: 100vh;
+  width: 100%;
+  transition: .5s;
+}
 
 /* about-block */
 .about-block {
   font-family: var(--boldff);
   color: var(--secondary);
-  /* font-size: 16px; */
-  position: fixed;
-  bottom: -50vh;
-  transition: 3s;
-  opacity: 0;
-  transform: translateY(50%);
 }
 
-.about-block.active{
-  position: static;
-    bottom: 50vh;
+.about-sector.active{
+    top: 15vh;
   opacity: 1; 
-  transform: translateY(0%); 
+position: absolute;
+  display: flex;
+    transition: .9s;
 }
 
 /* week stick */
@@ -157,8 +168,8 @@ label {
   background: var(--text);
   box-shadow: -1px -1px 15px -12px var(--secondary);
   color: var(--secondary);
-  width: 80%;
-  height: 40%;
+  width: 90%;
+  height: auto;
   margin: auto;
   align-content: center;
   border-radius: 10px;
@@ -171,7 +182,7 @@ label {
 
 .week-sticks{
 background-color: var(--secondary);
-width: 8px;
+width: 6px;
 height: 15px;
 border-radius: 10px;
 }
@@ -182,8 +193,8 @@ border-radius: 10px;
   gap: 5px;
 }
     .week_candles {
-      width: 3px;
-      height: 8px;
+      width: 2px;
+      height: 6px;
       border-radius: 1px;
     }
     .past {
@@ -244,8 +255,8 @@ border-radius: 10px;
   background: var(--text);
   box-shadow: -1px -1px 15px -12px var(--secondary);
   color: var(--secondary);
-  width: 80%;
-  height: 40%;
+  width: 90%;
+  height: auto;
   margin: auto;
   align-content: center;
   border-radius: 10px;
@@ -259,6 +270,25 @@ border-radius: 10px;
     font-size: 16px;
     opacity: .8;
 }
+
+.back-btn{
+    display: block;
+  width: 90%;
+  margin: auto;
+  height: 2.5rem;
+  font-size: 1rem;
+  margin-top: 10%;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: var(--primary);
+}
+
+
+/* 
+.back-btn.remove {
+
+} */
 
 @media (min-width:900px) {
 
